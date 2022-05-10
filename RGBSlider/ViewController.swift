@@ -8,12 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var rgbView: UIView!
+    
+    @IBOutlet var redValue: UILabel!
+    @IBOutlet var greenValue: UILabel!
+    @IBOutlet var blueValue: UILabel!
+    
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        redValue.text = String(format: "%.2f", redSlider.value)
+        greenValue.text = String(format: "%.2f", greenSlider.value)
+        blueValue.text = String(format: "%.2f", blueSlider.value)
     }
-
-
+    
+    
 }
+
+
 
